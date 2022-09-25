@@ -4,14 +4,26 @@
   <meta charset="UTF-8">
   <title>PokeDex</title>
   <link rel="stylesheet" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div class="container">
+  <section class="head">
+    <img src="assets/pokeball.svg" alt="pokeball">
     <h1>Pokedex</h1>
-    <ul data-js="pokedex" class="pokedex"></ul>
-  </div>
+  </section>
+  <section>
+    <input
+      type="search"
+      class="search"
+      alt="Procurar"
+      id="pokeSearch"
+      placeholder="Procurar"
+      onsearch="onSearch()"
+    />
+  </section>
+  <ul data-js="pokedex" class="pokedex"></ul>
   
   <script src="./app.js"></script>
 </body>
