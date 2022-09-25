@@ -14,7 +14,7 @@ const fetchPokemon = () => {
             const ul = document.querySelector('[data-js="pokedex"]')
             ul.innerHTML = lisPokemons
             console.log(ul)
-        })
+    })
 }
 
 const getPokemonUrlById = id => `https://pokeapi.co/api/v2/pokemon/${id}`
@@ -55,7 +55,7 @@ async function onSearch() {
   
     var pokeName = document.getElementById("pokeSearch");
     if (pokeName.value === "") {
-      onInit();
+        fetchPokemon()
     } else {
       const pokemon = await fetch(getPokemonUrlByName(pokeName.value.toLowerCase())).then(response => response.json())
       let li= createPokemon(pokemon);
